@@ -38,10 +38,10 @@ public class Synchronizer {
                 onSync++;
                 if (onSync == 1){
                   threadWait();
-                } else {
-                    player.play("Sounds/do-octave.wav");
-                    notifyAll();
                 }
+                // Both threads play do-octave simultaneously
+                player.play("Sounds/do-octave.wav");
+                notifyAll();
                 return;
         }
                 
@@ -66,10 +66,10 @@ public class Synchronizer {
                 onSync++;
                 if (onSync == 1){
                   threadWait();
-                } else {
-                    player.play("Sounds/do-octave.wav");
-                    notifyAll();
                 }
+                // Both threads play do-octave simultaneously
+                player.play("Sounds/do-octave.wav");
+                notifyAll();
                 return;    
         }   
         step++;
